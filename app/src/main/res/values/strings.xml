@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">cscan</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="camscanner">CamScanner</string>
+    <string name="noDocumentScan">No Document Scanned Yet.</string>
+    <string name="scanner">Scanner</string>
+    <string name="camera_permission_confirmation">This app demonstrates the usage of CameraView. In order to do that, it needs permission to access camera</string>
+    <string name="camera_permission_not_granted">"  private static final String FRAGMENT_DIALOG = \"dialog\";"</string>
+</resources>
