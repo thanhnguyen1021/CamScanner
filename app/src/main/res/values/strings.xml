@@ -9,4 +9,7 @@
     <string name="scanner">Scanner</string>
     <string name="camera_permission_confirmation">This app demonstrates the usage of CameraView. In order to do that, it needs permission to access camera</string>
     <string name="camera_permission_not_granted">"  private static final String FRAGMENT_DIALOG = \"dialog\";"</string>
+    <string name="retake">Retake</string>
+    <string name="rotateDoc">RotateDoc</string>
+    <string name="cropDocument">Crop Document</string>
 </resources>

@@ -8,6 +8,7 @@ import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -36,47 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView iv_folder;
     private ImageView iv_close_search;
     private ImageView iv_clear_txt;
-    BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
-        @Override
-        //ta tạo ra một đối tượng BroadcastReceiver với một phương thức "onReceive" định nghĩa.
-        // Phương thức "onReceive" sẽ được gọi khi một broadcast được gửi đến BroadcastReceiver.
-        public void onReceive(Context context, Intent intent) {
-            // ta kiểm tra giá trị của hằng số "Constant.IdentifyActivity"
-            // và mở một hoặc nhiều hoạt động tương ứng với giá trị của hằng số đó bằng cách sử dụng hàm "startActivity".
-            // Sau khi mở hoạt động, ta đặt lại giá trị của "Constant.IdentifyActivity" thành một chuỗi trống(được đặt lại thành một
-            // chuỗi trống để tránh việc nhận được cùng một hành động nhiều lần).
-            //Giá trị được đặt lại như vậy sẽ cho biết rằng hành động đã được xử lý xong và
-            // sẵn sàng để xử lý hành động khác.
-           if (Constant.IdentifyActivity.equals("MainGalleryActivity")) {
-//                ImagePicker.with((Activity) MainActivity.this)
-//                        .setStatusBarColor("#25c4a4")
-//                        .setToolbarColor("#25c4a4")
-//                        .setBackgroundColor("#ffffff")
-//                        .setFolderMode(true)
-//                        .setFolderTitle("Gallery")
-//                        .setMultipleMode(true)
-//                        .setShowNumberIndicator(true)
-//                        .setAlwaysShowDoneButton(true)
-//                        .setMaxSize(1)
-//                        .setShowCamera(false)
-//                        .setLimitMessage("You can select up to 1 images")
-//                        .setRequestCode(100)
-//                        .start();
-//                Constant.IdentifyActivity = "";
-            } else if (Constant.IdentifyActivity.equals("ScannerActivity")) {
 
-                Constant.IdentifyActivity = "";
-            } else if (Constant.IdentifyActivity.equals("GroupDocumentActivity")) {
-//                Intent intent2 = new Intent(MainActivity.this, GroupDocumentActivity.class);
-//                intent2.putExtra("current_group", current_group);
-//                startActivity(intent2);
-//                Constant.IdentifyActivity = "";
-            } else if (Constant.IdentifyActivity.equals("CropDocumentActivity")) {
-//                startActivity(new Intent(MainActivity.this, CropDocumentActivity.class));
-//                Constant.IdentifyActivity = "";
-            }
-        }
-    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
         getFormWidgets();
 
     }
+
+
 
     private void getFormWidgets() {
 //            drawer_ly = (DrawerLayout) findViewById(R.id.drawer_ly);
